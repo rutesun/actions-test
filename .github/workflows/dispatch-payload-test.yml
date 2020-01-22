@@ -1,4 +1,4 @@
-name: dispatch-all
+name: dispatch-payload
 
 on: 
   repository_dispatch:
