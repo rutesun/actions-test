@@ -1,0 +1,16 @@
+name: dispatch-all
+
+on: 
+  repository_dispatch:
+    types: [test,test1]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Dump GitHub event context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: |
+        echo Triggered event text: ${{ github.event.client_payload.text }}
