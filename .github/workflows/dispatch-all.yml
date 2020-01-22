@@ -1,8 +1,7 @@
-name: dispatch-test1
+name: dispatch-all
 
 on: 
   repository_dispatch:
-    types: test1
 
 jobs:
   build:
