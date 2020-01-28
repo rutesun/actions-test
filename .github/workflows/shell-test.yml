@@ -1,4 +1,4 @@
-name: dispatch-payload
+name: shell-test 
 
 on: 
   repository_dispatch:
@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Sed Test
       run: |
@@ -18,3 +18,4 @@ jobs:
     
     - name: Sed Test2
       run: |
+        cat ./worker.json
