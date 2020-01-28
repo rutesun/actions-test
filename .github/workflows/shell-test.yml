@@ -1,0 +1,20 @@
+name: dispatch-payload
+
+on: 
+  repository_dispatch:
+    types: [test]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Sed Test
+      run: |
+        echo "$(man sed)"
+    
+    - name: ECS
+      run: aws ecs help
+    
+    - name: Sed Test2
+      run: |

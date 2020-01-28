@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,6 +18,5 @@ jobs:
         echo ${{ fruit }}
         echo ${{ matrix.fruit }}
         env
-      with:
-        fruit: ${{ matrix.fruit }}
+      
   
