@@ -1,0 +1,24 @@
+name: matrix test 
+
+on: 
+  repository_dispatch:
+    types: [test]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        fruit: [apple, strawberry, melon]
+
+    steps:
+    - name: Print fruit
+      run: |
+        echo ${{ fruit }}
+        echo ${{ matrix.fruit }}
+        env
+      with:
+        fruit: ${{ matrix.fruit }}
+  
