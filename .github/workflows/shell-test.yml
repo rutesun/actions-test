@@ -33,5 +33,5 @@ jobs:
     - name: Sed Test2
       run: |
         cat worker.json
-        sed s/imageUrl/docker.registryhub.com/g worker.json
+        sed s/\{imageUrl\}/docker.registryhub.com/g worker.json
       working-directory: ./config
