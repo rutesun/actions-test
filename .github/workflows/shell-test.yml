@@ -25,9 +25,8 @@ jobs:
       run: | 
         ls -al
         ls -al ../
-      working-directory: ${{ github.workspace }}
+
 
     - name: Sed Test2
       run: |
         cat worker.json
-      working-directory: ./config
