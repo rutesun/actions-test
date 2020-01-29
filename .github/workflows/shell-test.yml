@@ -19,4 +19,5 @@ jobs:
     - name: Sed Test2
       run: |
         pwd
-        cat ./worker.json
+        ls
+        cat worker.json
