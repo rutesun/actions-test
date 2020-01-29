@@ -17,7 +17,9 @@ jobs:
       run: aws ecs help
     
     - name: Shell Test1
-      run: pwd
+      run: |
+        pwd
+        echo '${{ github.workspace }}'
 
     - name: Shell Test2
       run: ls -al
@@ -26,4 +28,4 @@ jobs:
     - name: Sed Test2
       run: |
         cat worker.json
-      working-directory: ${{ github.workspace }}
+      working-directory: ./config
