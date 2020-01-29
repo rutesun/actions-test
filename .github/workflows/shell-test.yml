@@ -16,8 +16,12 @@ jobs:
     - name: ECS
       run: aws ecs help
     
+    - name: Shell Test1
+      run: pwd
+
+    - name: Shell Test2
+      run: ls
+
     - name: Sed Test2
       run: |
-        pwd
-        ls
         cat worker.json
