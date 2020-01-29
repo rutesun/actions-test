@@ -20,8 +20,10 @@ jobs:
       run: pwd
 
     - name: Shell Test2
-      run: ls
+      run: ls -al
+      working-directory: ${{ github.workspace }}
 
     - name: Sed Test2
       run: |
         cat worker.json
+      working-directory: ${{ github.workspace }}
