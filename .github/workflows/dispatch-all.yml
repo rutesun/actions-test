@@ -12,3 +12,8 @@ jobs:
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
       run: echo "$GITHUB_CONTEXT"
+
+    - name: Shell
+      run: | 
+        ls
+        pwd
