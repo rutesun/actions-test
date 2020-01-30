@@ -32,6 +32,14 @@ jobs:
 
     - name: Sed Test2
       run: |
-        sed s/\{imageUrl\}/docker.registryhub.com/g worker.json
-        sed s/\{imageUrl\}/docker.registryhub.com/g server.json
+        sed s$\{imageUrl\}$***.dkr.ecr.ap-northeast-1.amazonaws.com\/airflow_action:21ce0514e4435727bdc333afcf6d32077696fce0$g worker.json
+        sed s$\{imageUrl\}$***.dkr.ecr.ap-northeast-1.amazonaws.com/airflow_action:21ce0514e4435727bdc333afcf6d32077696fce0$g server.json
       working-directory: ./config
+
+
+    - name: Test array
+      env: 
+        FRUITS: apple mango melon
+      run: |
+        env
+        echo $FRUITS
