@@ -43,3 +43,10 @@ jobs:
       run: |
         env
         echo $FRUITS
+
+    - name: Python
+      shell: python
+      run: |
+        import jinja2
+        
+        print(dir(jinja2))
